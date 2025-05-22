@@ -8,7 +8,7 @@
 
 **Software: blogbook**
 
-**Tested on: Windows, Apache 2.4.39 ,MySQL 8.0.12**
+**Tested on: Windows,PHP 5.6.9 ,Apache 2.4.39 ,MySQL 8.0.12**
 
 ## Vulnerability Overview
 
