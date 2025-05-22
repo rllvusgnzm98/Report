@@ -12,7 +12,7 @@
 
 ## Vulnerability Overview
 
-A SQL injection vulnerability exists in the [post.php] file of the BlogBook application. User-supplied input from the p_id GET parameter is directly concatenated into SQL query strings without adequate sanitization. This affects both an UPDATE query designed to increment post view counts and a SELECT query used to fetch post data for display. Consequently, an unauthenticated remote attacker can inject and execute arbitrary SQL commands, potentially leading to unauthorized data access, modification, or further compromise of the database.
+A SQL injection vulnerability exists in the [edit_post.php] file of the BlogBook application. User-supplied input from the p_id GET parameter is directly concatenated into SQL query strings without adequate sanitization. This affects both an UPDATE query designed to increment post view counts and a SELECT query used to fetch post data for display. Consequently, an unauthenticated remote attacker can inject and execute arbitrary SQL commands, potentially leading to unauthorized data access, modification, or further compromise of the database.
 
 ## Vulnerability Point
 
