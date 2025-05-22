@@ -12,7 +12,7 @@
 
 ## Vulnerability Overview
 
-A SQL injection vulnerability exists within a core post management interface of the BlogBook application, likely controlled by a source GET parameter (e.g., when source is edit_post or a default view). When a p_id GET parameter is provided, its value (stored as $edit_post_id) is directly concatenated into an SQL query (SELECT * FROM posts WHERE post_id={$edit_post_id}) without proper sanitization. This allows an attacker, potentially needing specific privileges to access this administrative functionality, to inject and execute arbitrary SQL commands, leading to unauthorized data access or manipulation.
+A SQL injection vulnerability exists in the [post.php] file of the BlogBook application. User-supplied input from the p_id GET parameter is directly concatenated into SQL query strings without adequate sanitization. This affects both an UPDATE query designed to increment post view counts and a SELECT query used to fetch post data for display. Consequently, an unauthenticated remote attacker can inject and execute arbitrary SQL commands, potentially leading to unauthorized data access, modification, or further compromise of the database.
 
 ## Vulnerability Point
 
@@ -50,4 +50,4 @@ $query="SELECT * FROM posts WHERE post_id={$edit_post_id}";
 
 `http://localhost/admin/posts.php?source=edit_post&p_id=-1%20UNION%20SELECT%20NULL,NULL,user(),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL%20--`
 
-![edit_post sqli](./assets/edit_post_sqli.png)
+![add_post sqli](./assets/edit_post_sqli.png)
