@@ -1,6 +1,6 @@
 # BlogBook user.php u_id Parameter SQL Injection
 
-**Exploit Title: dingfanzu-CMS saveNewPwd.php username SQL inject**
+**Exploit Title: BlogBook user.php u_id Parameter SQL**
 
 **Vendor Homepage: [chaitak-gorai/blogbook: Blogbook- Content Management System Project](https://github.com/chaitak-gorai/blogbook)**
 
